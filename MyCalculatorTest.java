@@ -18,45 +18,38 @@ public class MyCalculatorTest{
 	}
 	
 	// divide two numbers
-	public float divide(float a,float b){
-		assertEquals(1+1, 2);
-		assertEquals(1+0, 1);
+	public float divide(){
+		assertEquals(2/1, 1);
+		assertEquals(0/1, 0);
 	}
 	
 	// x^2 of two numbers
-	public float square(int x){
-		return x*x;
+	public float square(){
+		assertEquals(2, 4);
+		assertEquals(0, 0);
+		assertEquals(1, 1);
 	}
 	
 	// x^3 of three numbers
-	public float cube(int x){
-		return x*x*x;
+	public float cube(){
+		assertEquals(2, 8);
+		assertEquals(0, 0);
+		assertEquals(1, 1);
+		assertEquals(3, 27);
 	}
 	
 	// n! of an integer
-	public int nfactorial(int n){
-		int factorial = 1;
-		
-		for(int i=1;i<n;i++)
-			factorial *= i;
-		
-		return factorial;
+	public int nfactorial(){
+		assertEquals(1, 1);
+		assertEquals(0, 1);
+		assertEquals(2, 2);
+		assertEquals(3, 6);
 	}
 	
 	// binary search in an array
-	int binarySearch(int[] a,int x){
-		int n = a.length; // get number of elements in the array
-		int lower, upper, middle; // variables for positions in the array
-		lower = 0; upper = n-1; // initialize values of lower and upper points
-		
-		while(lower<=upper){
-			middle = (lower+upper)/2;
-			if(x>a[middle]) lower = middle + 1;
-			else if(x<a[middle]) upper = middle - 1;
-			else return middle;
-		}
-		
-		return 1;
+	int binarySearch(){
+		assertEquals({1,2,3},2, 2);
+		assertEquals({1,2,3},0, 1);
 	}
 	
 }
